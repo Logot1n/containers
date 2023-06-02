@@ -1,17 +1,17 @@
 export default class ErrorRepository {
-    constructor() {
-        this.errors = new Map();
-    }
+  constructor() {
+    this.errors = new Map();
+  }
 
-    addError(number, text) {
-        this.errors.set(number, text);
-    }
+  addError(number, text) {
+    this.errors.set(number, text);
+  }
 
-    translate(code) {
-        const message = this.errors.get(code);
-        if(!message) {
-            return 'Unknown Error';
-        }
-        return message;
+  translate(code) {
+    const message = this.errors.get(code);
+    if (!message) {
+      return 'Unknown Error';
     }
+    return message;
+  }
 }

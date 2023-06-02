@@ -1,24 +1,24 @@
 export default class Settings {
-    constructor(defaultSettings) {
-        this.defaultSettings = new Map([
-            ['theme', 'dark'],
-            ['music', 'trance'],
-            ['difficulty', 'easy'],
-        ]);
-        this.userSettings = new Map();
-    }
+  constructor() {
+    this.defaultSettings = new Map([
+      ['theme', 'dark'],
+      ['music', 'trance'],
+      ['difficulty', 'easy'],
+    ]);
+    this.userSettings = new Map();
+  }
 
-    resetDefault() {
-        return this.defaultSettings;
-    }
+  resetDefault() {
+    return this.defaultSettings;
+  }
 
-    setSettings(key, value) {
-        if(!this.userSettings.has(key)) {
-            this.userSettings.set(key, value);
-        }
+  setSettings(key, value) {
+    if (!this.userSettings.has(key)) {
+      this.userSettings.set(key, value);
     }
+  }
 
-    getSettings() {
-        return new Map([...this.userSettings, ...this.defaultSettings]);
-    }
+  getSettings() {
+    return new Map([...this.userSettings, ...this.defaultSettings]);
+  }
 }
