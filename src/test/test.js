@@ -39,7 +39,7 @@ describe('ErrorRepository', () => {
   });
 
   test('should return "Unknown Error"', () => {
-    expect(repository.translate(400)).toBe('Unknown Error');
+    expect(repository.translate(399)).toBe('Unknown Error');
   });
 });
 
